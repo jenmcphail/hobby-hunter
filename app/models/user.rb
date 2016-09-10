@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_and_belongs_to_many :hobbies
+  has_many :hobbies, :through => :hobbies_users
 
   validates :email, presence:true, uniqueness:true
   validates :username, presence: true
